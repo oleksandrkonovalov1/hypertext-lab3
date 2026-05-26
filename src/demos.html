@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Блок 1 — Основи JavaScript. Демонстрація роботи з DOM, таймерами та стилями.">
+  <meta name="keywords" content="JavaScript, DOM, таймери, fontSize, setInterval, getElementsByTagName">
+  <meta name="author" content="Студент, варіант 9">
+  <meta name="theme-color" content="#1b5e20">
+  <title>JS Демо: Блок 1 &mdash; Ботанічний довідник</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <header>
+    <h1>Ботанічний довідник</h1>
+    <p class="tagline">Блок 1 &mdash; Основи JavaScript</p>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li class="dropdown">
+        <a href="plants.html">Рослини &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="plants.html#flowering">Квіткові</a></li>
+          <li><a href="plants.html#trees">Дерева</a></li>
+          <li><a href="plants.html#herbs">Трави</a></li>
+          <li><a href="plants.html#table">Таблиця</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li class="dropdown">
+        <a href="demos.html" class="active">JS Демо &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="demos.html">Блок 1 — Основи</a></li>
+          <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+          <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article>
+        <h2>Блок 1 &mdash; Основи JavaScript (оцінка 3)</h2>
+        <p>
+          На цій сторінці представлено п'ять обов'язкових завдань, що демонструють
+          базові можливості JavaScript: робота з DOM-елементами, стилями, таймерами
+          та методами пошуку елементів.
+        </p>
+
+        <!-- Завдання 1: Функція з різними розмірами шрифту -->
+        <section class="demo-section" id="task1">
+          <h3>Завдання 1 &mdash; Функція зміни розміру шрифту</h3>
+          <p>
+            Функція <code>showText(text, size)</code> виводить текст із заданим розміром
+            шрифту, використовуючи властивість <code>style.fontSize</code>.
+          </p>
+          <div>
+            <label for="task1-text">Текст:</label>
+            <input type="text" id="task1-text" value="Ботаніка" style="padding:6px; margin:4px; width:200px; border:1px solid #a5d6a7; border-radius:4px;">
+            <label for="task1-size">Розмір (px):</label>
+            <input type="number" id="task1-size" value="24" min="8" max="72" style="padding:6px; margin:4px; width:80px; border:1px solid #a5d6a7; border-radius:4px;">
+            <button class="btn" onclick="handleShowText()">Показати</button>
+            <button class="btn btn-secondary" onclick="showAllSizes()">Показати всі розміри</button>
+          </div>
+          <div class="demo-output" id="font-output"></div>
+        </section>
+
+        <!-- Завдання 2: Зображення в випадковому місці -->
+        <section class="demo-section" id="task2">
+          <h3>Завдання 2 &mdash; Випадкове розміщення зображення</h3>
+          <p>
+            Кожну секунду маленьке зображення рослини з'являється у новому місці.
+            Використовуються властивості <code>style.top</code> та <code>style.left</code>
+            елемента IMG, а також <code>setInterval</code>.
+          </p>
+          <div>
+            <button class="btn" id="btn-start-images" onclick="toggleImageAnimation()">Запустити</button>
+            <button class="btn btn-danger" onclick="clearImages()">Очистити</button>
+          </div>
+          <div class="demo-output" id="image-area"></div>
+        </section>
+
+        <!-- Завдання 3: getElementsByTagName + setAttribute -->
+        <section class="demo-section" id="task3">
+          <h3>Завдання 3 &mdash; Зміна шрифту всіх абзаців</h3>
+          <p>
+            Знаходимо всі елементи <code>&lt;p&gt;</code> на сторінці за допомогою
+            <code>getElementsByTagName</code> та змінюємо їх розмір шрифту на 15px
+            через <code>setAttribute</code>.
+          </p>
+          <p>Це ще один абзац для демонстрації.</p>
+          <p>І третій абзац &mdash; всі вони будуть змінені.</p>
+          <div>
+            <button class="btn" onclick="changeParagraphs()">Змінити на 15px</button>
+            <button class="btn btn-secondary" onclick="resetParagraphs()">Скинути</button>
+          </div>
+          <div class="demo-output" id="task3-output">
+            <p>Результат буде показано тут.</p>
+          </div>
+        </section>
+
+        <!-- Завдання 4: Текстовий годинник -->
+        <section class="demo-section" id="task4">
+          <h3>Завдання 4 &mdash; Текстовий годинник</h3>
+          <p>
+            Годинник, який показує поточний час, оновлюється щосекунди
+            за допомогою <code>setInterval</code> об'єкта <code>window</code>.
+          </p>
+          <div class="clock-display" id="clock">--:--:--</div>
+          <p style="margin-top:8px; text-align:center; font-size:0.9em; color:#666;">
+            Дата: <span id="clock-date">--</span>
+          </p>
+        </section>
+
+        <!-- Завдання 5: Ефект затухання -->
+        <section class="demo-section" id="task5">
+          <h3>Завдання 5 &mdash; Ефект поступового затухання</h3>
+          <p>
+            За допомогою таймера створюємо ефект плавного зникнення (fade-out)
+            частини документа.
+          </p>
+          <div>
+            <button class="btn" onclick="startFadeOut()">Затухання</button>
+            <button class="btn btn-secondary" onclick="resetFade()">Відновити</button>
+          </div>
+          <div class="demo-output fade-target" id="fade-area">
+            <h4 style="color:#1b5e20;">Цікавий факт про рослини</h4>
+            <p style="margin-bottom:6px;">
+              <strong>Бамбук</strong> &mdash; найшвидше зростаюча рослина у світі.
+              Деякі види можуть вирости на <em>91 см за добу</em>!
+            </p>
+            <p style="margin-bottom:6px;">
+              <strong>Секвоя</strong> &mdash; найвище дерево планети, сягає
+              понад <em>115 метрів</em> у висоту.
+            </p>
+            <p>
+              Ці факти поступово зникнуть при натисканні кнопки &laquo;Затухання&raquo;.
+            </p>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <aside>
+      <h3>Завдання Блоку 1</h3>
+      <ul>
+        <li><a href="#task1">1. Розмір шрифту</a></li>
+        <li><a href="#task2">2. Випадкові зображення</a></li>
+        <li><a href="#task3">3. getElementsByTagName</a></li>
+        <li><a href="#task4">4. Текстовий годинник</a></li>
+        <li><a href="#task5">5. Ефект затухання</a></li>
+      </ul>
+
+      <h4>Інші блоки</h4>
+      <ul>
+        <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+        <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ботанічний довідник &mdash; Студент, варіант 9</p>
+    <p>Харківський національний університет радіоелектроніки (ХНУРЕ)</p>
+    <p><a href="#top">Повернутися на початок</a></p>
+  </footer>
+
+  <script src="js/demos.js"></script>
+</body>
+</html>

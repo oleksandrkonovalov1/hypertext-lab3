@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог рослин — Ботанічний довідник. Квіткові, дерева, лікарські трави.">
+  <meta name="keywords" content="каталог рослин, квіткові рослини, дерева, лікарські трави, таблиця рослин">
+  <meta name="author" content="Студент, варіант 9">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1b5e20">
+  <meta http-equiv="Content-Language" content="uk">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Каталог рослин — Ботанічний довідник">
+  <meta property="og:description" content="Квіткові рослини, дерева, лікарські трави">
+  <meta property="og:type" content="website">
+  <title>Каталог рослин &mdash; Ботанічний довідник</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal style (Block 1: Пов'язані стилі) -->
+  <style>
+    .catalog-intro { margin-bottom: 16px; }
+  </style>
+</head>
+<body id="top">
+
+  <header>
+    <h1>Ботанічний довідник</h1>
+    <p class="tagline">Каталог рослин</p>
+  </header>
+
+  <!-- Navigation with horizontal dropdown (Block 2) -->
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li class="dropdown">
+        <a href="plants.html" class="active">Рослини &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="#flowering">Квіткові</a></li>
+          <li><a href="#trees">Дерева</a></li>
+          <li><a href="#herbs">Трави</a></li>
+          <li><a href="#table">Таблиця</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li class="dropdown">
+        <a href="demos.html">JS Демо &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="demos.html">Блок 1 — Основи</a></li>
+          <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+          <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article>
+        <h2>Каталог рослин</h2>
+
+        <!-- Inner page anchor navigation (Block 1: hyperlinks within same doc) -->
+        <nav class="page-nav">
+          <a href="#flowering">Квіткові</a> |
+          <a href="#trees">Дерева</a> |
+          <a href="#herbs">Трави</a> |
+          <a href="#table">Таблиця</a> |
+          <a href="#iframe-section">Карта</a>
+        </nav>
+
+        <!-- Section: Flowering plants -->
+        <section id="flowering">
+          <h2>Квіткові рослини</h2>
+          <p>
+            Квіткові рослини (Magnoliophyta) &mdash; <strong>найчисленніший відділ</strong>
+            рослинного царства, що налічує понад <em>350 000 видів</em>. Їх відмінна риса &mdash;
+            наявність квітки як органа розмноження.
+          </p>
+
+          <div class="plant-card">
+            <!-- Image as hyperlink to another webdoc (Block 1) -->
+            <a href="https://uk.wikipedia.org/wiki/Троянда" target="_blank" rel="noopener">
+              <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=400"
+                   alt="Троянда садова (Rosa)"
+                   class="plant-img" width="190" height="155">
+            </a>
+            <div class="plant-info">
+              <h3>Троянда (Rosa)</h3>
+              <p>
+                Рід рослин родини <strong>Розових (Rosaceae)</strong>. Нараховує понад
+                <span class="bg-text">300 видів</span> і тисячі сортів. Широко
+                використовується в <u>декоративному садівництві</u> та парфумерії.
+              </p>
+              <h4>Сорти за кольором:</h4>
+              <!-- Bulleted list nested in numbered (Block 1) -->
+              <ol>
+                <li>Одноколірні
+                  <ul>
+                    <li>Червоні &mdash; символ кохання</li>
+                    <li>Білі &mdash; символ чистоти</li>
+                    <li>Жовті &mdash; символ дружби</li>
+                  </ul>
+                </li>
+                <li>Різнокольорові
+                  <ul>
+                    <li>Строкаті &mdash; з переходами кольорів</li>
+                    <li>Смугасті &mdash; різнокольорові смуги</li>
+                  </ul>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+        <!-- Section: Trees -->
+        <section id="trees">
+          <h2>Дерева</h2>
+          <p>
+            Дерева &mdash; <strong>багаторічні рослини</strong> з одним здерев'янілим стовбуром.
+            Вони формують основу <em>лісових екосистем</em> нашої планети.
+          </p>
+
+          <div class="plant-card">
+            <a href="https://uk.wikipedia.org/wiki/Дуб_звичайний" target="_blank" rel="noopener">
+              <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400"
+                   alt="Дуб звичайний (Quercus robur)"
+                   class="plant-img" width="190" height="155">
+            </a>
+            <div class="plant-info">
+              <h3>Дуб звичайний (Quercus robur)</h3>
+              <p>
+                Листяне дерево родини <strong>Букових (Fagaceae)</strong>. Живе до
+                <span class="bg-text">2000 років</span>, сягає 40 м у висоту.
+                Деревина цінується у <u>будівництві та меблевому виробництві</u>.
+              </p>
+
+              <h4>Характеристики дуба</h4>
+              <table>
+                <caption>Таблиця 2 &mdash; Характеристики дуба звичайного</caption>
+                <thead>
+                  <tr>
+                    <th>Параметр</th>
+                    <th>Значення</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Висота</td>
+                    <td>20&ndash;40 м</td>
+                  </tr>
+                  <tr>
+                    <td>Діаметр стовбура</td>
+                    <td>до 2 м</td>
+                  </tr>
+                  <tr>
+                    <td>Тривалість життя</td>
+                    <td>500&ndash;2000 років</td>
+                  </tr>
+                  <tr>
+                    <td>Ареал</td>
+                    <td>Європа, Мала Азія</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+        <!-- Section: Herbs -->
+        <section id="herbs">
+          <h2>Лікарські трави</h2>
+          <p>
+            Лікарські трави &mdash; рослини, що використовуються в <strong>народній медицині</strong>
+            та фармакології. Україна має <em>багату традицію</em> фітотерапії.
+          </p>
+
+          <!-- Numbered list with nested bulleted lists (Block 1) -->
+          <ol>
+            <li>Ромашка аптечна (Matricaria chamomilla)
+              <ul>
+                <li>Дія: протизапальна, антисептична</li>
+                <li>Застосування: чаї, відвари, примочки</li>
+                <li>Збір: червень&ndash;серпень</li>
+              </ul>
+            </li>
+            <li>М'ята перцева (Mentha piperita)
+              <ul>
+                <li>Дія: заспокійлива, спазмолітична</li>
+                <li>Застосування: чаї, кулінарія, косметика</li>
+                <li>Збір: до початку цвітіння</li>
+              </ul>
+            </li>
+            <li>Валеріана лікарська (Valeriana officinalis)
+              <ul>
+                <li>Дія: седативна, анксіолітична</li>
+                <li>Застосування: настоянки, таблетки</li>
+                <li>Збір: вересень&ndash;жовтень</li>
+              </ul>
+            </li>
+            <li>Звіробій (Hypericum perforatum)
+              <ul>
+                <li>Дія: антидепресивна, антибактеріальна</li>
+                <li>Застосування: олія, відвари, чаї</li>
+                <li>Збір: червень&ndash;липень</li>
+              </ul>
+            </li>
+          </ol>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+        <!-- Section: Comparison table -->
+        <section id="table">
+          <h2>Порівняльна таблиця рослин</h2>
+
+          <table id="plants-table">
+            <caption>Таблиця 3 &mdash; Характеристики основних видів рослин</caption>
+            <thead>
+              <tr>
+                <th>Назва</th>
+                <th>Родина</th>
+                <th>Висота</th>
+                <th>Тривалість життя</th>
+                <th>Застосування</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Соняшник</td>
+                <td>Айстрові</td>
+                <td>1&ndash;3 м</td>
+                <td>Однорічна</td>
+                <td>Олія, їжа</td>
+              </tr>
+              <tr>
+                <td>Дуб</td>
+                <td>Букові</td>
+                <td>20&ndash;40 м</td>
+                <td>До 2000 р.</td>
+                <td>Деревина, жолуді</td>
+              </tr>
+              <tr>
+                <td>Ромашка</td>
+                <td>Айстрові</td>
+                <td>15&ndash;60 см</td>
+                <td>Однорічна</td>
+                <td>Медицина, косметика</td>
+              </tr>
+              <tr>
+                <td>Троянда</td>
+                <td>Розові</td>
+                <td>0.5&ndash;3 м</td>
+                <td>Багаторічна</td>
+                <td>Декор, парфуми</td>
+              </tr>
+              <tr>
+                <td>М'ята</td>
+                <td>Губоцвіті</td>
+                <td>30&ndash;90 см</td>
+                <td>Багаторічна</td>
+                <td>Приправа, ліки</td>
+              </tr>
+              <tr>
+                <td>Звіробій</td>
+                <td>Звіробійні</td>
+                <td>30&ndash;100 см</td>
+                <td>Багаторічна</td>
+                <td>Медицина</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+        <!-- Section: Iframe (Block 2, завдання 2) -->
+        <section id="iframe-section">
+          <h2>Карта природних зон України</h2>
+          <p>Інтерактивна карта з нанесеними природними зонами та ботанічними садами:</p>
+
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=22.0%2C44.0%2C40.0%2C52.5&amp;layer=mapnik"
+            width="100%"
+            height="380"
+            title="Карта природних зон України (OpenStreetMap)"
+            loading="lazy">
+          </iframe>
+          <p><small>Джерело: <a href="https://www.openstreetmap.org" target="_blank" rel="noopener">OpenStreetMap</a></small></p>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+      </article>
+    </main>
+
+    <aside>
+      <h3>Навігація</h3>
+      <ul>
+        <li><a href="#flowering">Квіткові рослини</a></li>
+        <li><a href="#trees">Дерева</a></li>
+        <li><a href="#herbs">Лікарські трави</a></li>
+        <li><a href="#table">Таблиця видів</a></li>
+        <li><a href="#iframe-section">Карта зон</a></li>
+      </ul>
+
+      <h4>Кількість видів</h4>
+      <ul>
+        <li>Квіткові: <strong>350 000+</strong></li>
+        <li>Папороті: <strong>~10 500</strong></li>
+        <li>Мохи: <strong>~20 000</strong></li>
+        <li>Голонасінні: <strong>~1 000</strong></li>
+      </ul>
+
+      <h4>Корисні посилання</h4>
+      <ul>
+        <li><a href="https://www.inaturalist.org" target="_blank" rel="noopener">iNaturalist</a></li>
+        <li><a href="https://www.floraofukraine.com" target="_blank" rel="noopener">Flora of Ukraine</a></li>
+      </ul>
+    </aside>
+
+  </div><!-- /page-wrapper -->
+
+  <footer>
+    <p>&copy; 2026 Ботанічний довідник &mdash; Студент, варіант 9</p>
+    <p>Харківський національний університет радіоелектроніки (ХНУРЕ)</p>
+    <p><a href="#top">Повернутися на початок</a></p>
+  </footer>
+
+</body>
+</html>

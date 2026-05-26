@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контакти та медіа — Ботанічний довідник. Форма зворотного зв'язку, аудіо та відео.">
+  <meta name="keywords" content="контакти, зворотний зв'язок, ботаніка, медіа, форма">
+  <meta name="author" content="Студент, варіант 9">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1b5e20">
+  <meta http-equiv="Content-Language" content="uk">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Контакти — Ботанічний довідник">
+  <meta property="og:description" content="Зворотний зв'язок, аудіо та відео матеріали">
+  <meta property="og:type" content="website">
+  <title>Контакти &mdash; Ботанічний довідник</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal style (Block 1: Пов'язані стилі) -->
+  <style>
+    .form-note { font-size: 0.85em; color: #666; margin-top: 6px; }
+  </style>
+</head>
+<body id="top">
+
+  <header>
+    <h1>Ботанічний довідник</h1>
+    <p class="tagline">Контакти та медіа</p>
+  </header>
+
+  <!-- Navigation with horizontal dropdown (Block 2) -->
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li class="dropdown">
+        <a href="plants.html">Рослини &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="plants.html#flowering">Квіткові</a></li>
+          <li><a href="plants.html#trees">Дерева</a></li>
+          <li><a href="plants.html#herbs">Трави</a></li>
+          <li><a href="plants.html#table">Таблиця</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html" class="active">Контакти</a></li>
+      <li class="dropdown">
+        <a href="demos.html">JS Демо &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="demos.html">Блок 1 — Основи</a></li>
+          <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+          <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article>
+
+        <!-- Section: Media (Block 2, завдання 3) -->
+        <section id="media">
+          <h2>Медіа</h2>
+          <p>
+            Ознайомтесь із <strong>аудіо та відео матеріалами</strong> про рослинний світ.
+            Обидва плеєри мають <em>стандартні елементи управління</em> браузера.
+          </p>
+
+          <!-- Audio with controls (Block 2) -->
+          <h3>Аудіо &mdash; Звуки природи</h3>
+          <p>Розслаблююча мелодія з ботанічного саду:</p>
+          <audio controls>
+            <source src="media/nature-sounds.mp3" type="audio/mpeg">
+            Ваш браузер не підтримує аудіо. Спробуйте оновити браузер.
+          </audio>
+
+          <!-- Video with controls (Block 2) -->
+          <h3>Відео &mdash; Ботанічний сад</h3>
+          <p>Відеоекскурсія ботанічним садом ХНУРЕ:</p>
+          <video controls poster="media/garden-poster.jpg">
+            <source src="media/botanical-garden.mp4"  type="video/mp4">
+            <source src="media/botanical-garden.webm" type="video/webm">
+            Ваш браузер не підтримує відео. Спробуйте оновити браузер.
+          </video>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+        <!-- Section: Contact form (Block 2, завдання 4) -->
+        <section id="contact-form">
+          <h2>Форма зворотного зв'язку</h2>
+          <p>Маєте питання або пропозиції? Заповніть форму нижче &mdash; ми відповімо якнайшвидше.</p>
+
+          <form action="#" method="post" class="contact-form">
+
+            <!-- Text input with required + maxlength (Block 2) -->
+            <div class="form-group">
+              <label for="name">Ім'я та прізвище *</label>
+              <input type="text"
+                     id="name"
+                     name="name"
+                     required
+                     maxlength="100"
+                     placeholder="Введіть ваше ім'я та прізвище">
+            </div>
+
+            <!-- Email input with required (Block 2) -->
+            <div class="form-group">
+              <label for="email">Електронна пошта (email) *</label>
+              <input type="email"
+                     id="email"
+                     name="email"
+                     required
+                     placeholder="your@email.com">
+            </div>
+
+            <!-- Tel input with pattern (Block 2) -->
+            <div class="form-group">
+              <label for="tel">Номер телефону (tel)</label>
+              <input type="tel"
+                     id="tel"
+                     name="tel"
+                     pattern="[+]?[0-9]{10,13}"
+                     placeholder="+380XXXXXXXXX">
+            </div>
+
+            <!-- URL input (Block 2) -->
+            <div class="form-group">
+              <label for="website">Веб-сайт (url)</label>
+              <input type="url"
+                     id="website"
+                     name="website"
+                     placeholder="https://example.com">
+            </div>
+
+            <!-- datetime-local input (Block 2) -->
+            <div class="form-group">
+              <label for="visit-date">Бажана дата відповіді (datetime)</label>
+              <input type="datetime-local"
+                     id="visit-date"
+                     name="visit-date"
+                     min="2026-01-01T00:00">
+            </div>
+
+            <!-- Number input with min/max/step (Block 2: max, min, step attributes) -->
+            <div class="form-group">
+              <label for="rating">Оцінка довідника (1&ndash;10)</label>
+              <input type="number"
+                     id="rating"
+                     name="rating"
+                     min="1"
+                     max="10"
+                     step="1"
+                     placeholder="Від 1 до 10">
+            </div>
+
+            <!-- Select -->
+            <div class="form-group">
+              <label for="topic">Тема звернення</label>
+              <select id="topic" name="topic">
+                <option value="">— Оберіть тему —</option>
+                <option value="question">Питання</option>
+                <option value="suggestion">Пропозиція</option>
+                <option value="error">Помилка в матеріалі</option>
+                <option value="cooperation">Співпраця</option>
+              </select>
+            </div>
+
+            <!-- Textarea with required + maxlength (Block 2) -->
+            <div class="form-group">
+              <label for="message">Повідомлення *</label>
+              <textarea id="message"
+                        name="message"
+                        rows="6"
+                        cols="40"
+                        required
+                        maxlength="1000"
+                        placeholder="Ваше повідомлення (до 1000 символів)..."></textarea>
+            </div>
+
+            <!-- Password with pattern validation (Block 2: pattern attribute) -->
+            <div class="form-group">
+              <label for="password">Пароль для реєстрації</label>
+              <input type="password"
+                     id="password"
+                     name="password"
+                     pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                     placeholder="Мінімум 8 символів, літери + цифри">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn-submit">Надіслати</button>
+              <button type="reset"  class="btn-reset">Очистити</button>
+            </div>
+
+          </form>
+
+          <a href="#top" class="back-to-top">&#8593; На початок</a>
+        </section>
+
+      </article>
+    </main>
+
+    <aside>
+      <h3>Контактна інформація</h3>
+      <address>
+        <p><strong>Університет:</strong> ХНУРЕ</p>
+        <p><strong>Кафедра:</strong> Програмна інженерія</p>
+        <p><strong>Email:</strong><br>
+          <a href="mailto:botanical@nure.ua">botanical@nure.ua</a>
+        </p>
+        <p><strong>Телефон:</strong><br>+38 (057) 702-13-00</p>
+        <p><strong>Адреса:</strong><br>вул. Науки, 14, Харків</p>
+      </address>
+
+      <h4>Режим роботи</h4>
+      <ul>
+        <li>Пн&ndash;Пт: 9:00&ndash;17:00</li>
+        <li>Сб: 10:00&ndash;14:00</li>
+        <li>Нд: вихідний</li>
+      </ul>
+
+      <h4>Швидкий перехід</h4>
+      <ul>
+        <li><a href="#media">Медіа</a></li>
+        <li><a href="#contact-form">Форма</a></li>
+      </ul>
+    </aside>
+
+  </div><!-- /page-wrapper -->
+
+  <footer>
+    <p>&copy; 2026 Ботанічний довідник &mdash; Студент, варіант 9</p>
+    <p>Харківський національний університет радіоелектроніки (ХНУРЕ)</p>
+    <p><a href="#top">Повернутися на початок</a></p>
+  </footer>
+
+</body>
+</html>

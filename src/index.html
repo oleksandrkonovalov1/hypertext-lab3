@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <!-- Meta-tags (Block 1, завдання 3) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ботанічний довідник — повна інформація про рослини, їх класифікацію та застосування">
+  <meta name="keywords" content="ботаніка, рослини, довідник, флора, квіти, дерева, трави, класифікація рослин">
+  <meta name="author" content="Студент, варіант 9">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1b5e20">
+  <meta name="generator" content="VS Code">
+  <meta http-equiv="Content-Language" content="uk">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Ботанічний довідник">
+  <meta property="og:description" content="Енциклопедія рослинного світу">
+  <meta property="og:type" content="website">
+  <title>Ботанічний довідник — Головна</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Internal style example (Block 1: Пов'язані стилі) -->
+  <style>
+    .intro-highlight { border-left: 4px solid #81c784; padding-left: 12px; }
+  </style>
+</head>
+<body id="top">
+
+  <!-- Header -->
+  <header>
+    <h1>Ботанічний довідник</h1>
+    <p class="tagline">Енциклопедія рослинного світу</p>
+  </header>
+
+  <!-- Navigation with horizontal dropdown (Block 2, завдання 1) -->
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html" class="active">Головна</a></li>
+      <li class="dropdown">
+        <a href="plants.html">Рослини &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="plants.html#flowering">Квіткові</a></li>
+          <li><a href="plants.html#trees">Дерева</a></li>
+          <li><a href="plants.html#herbs">Трави</a></li>
+          <li><a href="plants.html#table">Таблиця</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li class="dropdown">
+        <a href="demos.html">JS Демо &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="demos.html">Блок 1 — Основи</a></li>
+          <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+          <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article>
+
+        <!-- Section: About -->
+        <section id="about">
+          <h2>Про довідник</h2>
+          <p>
+            <strong>Ботанічний довідник</strong> — це <em>наукове видання</em>, що містить
+            <!-- Inline style example (Block 1: задання CSS на льоту) -->
+            <span style="color: #2e7d32; font-weight: bold;">комплексну</span>
+            систематизовану інформацію про рослини. Матеріал охоплює опис видів, їхню
+            <span class="bg-text">класифікацію</span> та практичне застосування.
+            Довідник призначений для студентів, науковців та всіх, хто цікавиться
+            <u>рослинним світом</u>.
+          </p>
+          <p>
+            Розділи охоплюють квіткові рослини, дерева, чагарники, трави та лікарські рослини.
+            Детальніший каталог видів дивіться у розділі
+            <a href="plants.html">Рослини</a>.
+            Для зворотного зв'язку перейдіть на <a href="contact.html">сторінку контактів</a>.
+          </p>
+        </section>
+
+        <!-- Section: Classification with nested lists (Block 1) -->
+        <section id="classification">
+          <h2>Класифікація рослин</h2>
+          <h3>Царство Рослини (Plantae)</h3>
+          <p>Рослини поділяють на два великі відділи &mdash; вищі та нижчі:</p>
+
+          <!-- Numbered list with nested bulleted lists -->
+          <ol>
+            <li>Вищі рослини (Embryophyta)
+              <ul>
+                <li>Квіткові &mdash; <mark>Magnoliophyta</mark></li>
+                <li>Голонасінні &mdash; Pinophyta</li>
+                <li>Папороті &mdash; Polypodiophyta</li>
+                <li>Мохи &mdash; Bryophyta</li>
+              </ul>
+            </li>
+            <li>Нижчі рослини
+              <ul>
+                <li>Зелені водорості &mdash; Chlorophyta</li>
+                <li>Бурі водорості &mdash; Phaeophyta</li>
+                <li>Лишайники &mdash; Lichenes</li>
+              </ul>
+            </li>
+            <li>Гриби (Fungi) &mdash; традиційно розглядаються разом із рослинами</li>
+          </ol>
+
+          <h4>Значення рослин для людини</h4>
+          <!-- Bulleted list -->
+          <ul>
+            <li>Виробництво кисню та фотосинтез</li>
+            <li>Харчова цінність: фрукти, овочі, злаки</li>
+            <li>Медичне застосування: лікарські трави</li>
+            <li>Декоративна та естетична функція</li>
+            <li>Сировина для промисловості</li>
+          </ul>
+        </section>
+
+        <!-- Section: Featured plant with image + table -->
+        <section id="featured">
+          <h2>Рослина місяця</h2>
+
+          <div class="plant-card">
+            <!-- Image as hyperlink to another webdoc (Block 1) -->
+            <a href="https://uk.wikipedia.org/wiki/Соняшник_однорічний" target="_blank" rel="noopener">
+              <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=400"
+                   alt="Соняшник однорічний (Helianthus annuus)"
+                   class="plant-img"
+                   width="190" height="155">
+            </a>
+            <div class="plant-info">
+              <h3>Соняшник (Helianthus annuus)</h3>
+              <p>
+                Соняшник &mdash; <strong>однорічна рослина</strong> родини Айстрових (Asteraceae).
+                Батьківщина &mdash; <em>Північна Америка</em>. Широко культивується заради
+                <u>олії та насіння</u>. Є символом України.
+              </p>
+
+              <h4>Основні характеристики</h4>
+              <!-- Table (Block 1) -->
+              <table>
+                <caption>Таблиця 1 &mdash; Характеристики соняшника</caption>
+                <thead>
+                  <tr>
+                    <th>Параметр</th>
+                    <th>Значення</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Висота</td>
+                    <td>60&ndash;300 см</td>
+                  </tr>
+                  <tr>
+                    <td>Діаметр квіткового кошика</td>
+                    <td>30&ndash;50 см</td>
+                  </tr>
+                  <tr>
+                    <td>Вегетаційний період</td>
+                    <td>80&ndash;120 днів</td>
+                  </tr>
+                  <tr>
+                    <td>Вміст олії в насінні</td>
+                    <td>до 52&nbsp;%</td>
+                  </tr>
+                  <tr>
+                    <td>Батьківщина</td>
+                    <td>Північна Америка</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Glossary (DL) -->
+        <section id="terms">
+          <h2>Ботанічні терміни</h2>
+          <h6>Глосарій основних понять</h6>
+
+          <dl>
+            <dt>Фотосинтез</dt>
+            <dd>Процес перетворення світлової енергії на хімічну у хлоропластах рослинних клітин.</dd>
+
+            <dt>Хлорофіл</dt>
+            <dd>Зелений пігмент рослин, що поглинає сонячне світло для фотосинтезу.</dd>
+
+            <dt>Флора</dt>
+            <dd>Сукупність видів рослин певного регіону або геологічного периоду.</dd>
+
+            <dt>Вегетація</dt>
+            <dd>Активна фаза росту та розвитку рослини протягом теплого сезону.</dd>
+          </dl>
+
+          <!-- Anchor link to same page (Block 1) -->
+          <a href="#top" class="back-to-top">&#8593; На початок сторінки</a>
+        </section>
+
+      </article>
+    </main>
+
+    <!-- Aside sidebar -->
+    <aside>
+      <h3>Цікаві факти</h3>
+      <ul>
+        <li>На Землі &mdash; близько <strong>390 000</strong> видів рослин</li>
+        <li>Найстаріше дерево &mdash; сосна <em>Мафусаїл</em> (4789 р.)</li>
+        <li>Амазонія налічує &asymp; 40 000 видів рослин</li>
+        <li>Рослини виробляють <strong>70&nbsp;%</strong> кисню атмосфери</li>
+      </ul>
+
+      <h4>Швидкий перехід</h4>
+      <ul>
+        <li><a href="#about">Про довідник</a></li>
+        <li><a href="#classification">Класифікація</a></li>
+        <li><a href="#featured">Рослина місяця</a></li>
+        <li><a href="#terms">Терміни</a></li>
+      </ul>
+
+      <h4>Зовнішні ресурси</h4>
+      <ul>
+        <li><a href="https://www.gbif.org" target="_blank" rel="noopener">GBIF &mdash; База даних видів</a></li>
+        <li><a href="https://www.kew.org" target="_blank" rel="noopener">Royal Botanic Gardens Kew</a></li>
+        <li><a href="https://plants.usda.gov" target="_blank" rel="noopener">USDA Plants Database</a></li>
+      </ul>
+    </aside>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- Footer (Block 1) -->
+  <footer>
+    <p>&copy; 2026 Ботанічний довідник &mdash; Студент, варіант 9</p>
+    <p>Харківський національний університет радіоелектроніки (ХНУРЕ)</p>
+    <p><a href="#top">Повернутися на початок</a></p>
+  </footer>
+
+</body>
+</html>

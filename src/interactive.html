@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Блок 2 — Інтерактивні JS-завдання: тултіпи, перетягування колонок, зміна кольору, координати.">
+  <meta name="keywords" content="JavaScript, tooltip, drag and drop, події, координати, клавіатура">
+  <meta name="author" content="Студент, варіант 9">
+  <meta name="theme-color" content="#1b5e20">
+  <title>JS Демо: Блок 2 &mdash; Ботанічний довідник</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <header>
+    <h1>Ботанічний довідник</h1>
+    <p class="tagline">Блок 2 &mdash; Інтерактивні JavaScript-завдання</p>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li class="dropdown">
+        <a href="plants.html">Рослини &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="plants.html#flowering">Квіткові</a></li>
+          <li><a href="plants.html#trees">Дерева</a></li>
+          <li><a href="plants.html#herbs">Трави</a></li>
+          <li><a href="plants.html#table">Таблиця</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li class="dropdown">
+        <a href="demos.html" class="active">JS Демо &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="demos.html">Блок 1 — Основи</a></li>
+          <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+          <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article>
+        <h2>Блок 2 &mdash; Інтерактивні завдання (оцінка 4)</h2>
+        <p>
+          Чотири завдання, що демонструють роботу з подіями миші та клавіатури,
+          динамічне позиціювання елементів та drag-and-drop у контексті ботанічного
+          довідника.
+        </p>
+
+        <!-- Завдання 1: Popup tooltip -->
+        <section class="demo-section" id="task1">
+          <h3>Завдання 1 &mdash; Спливаюча підказка (tooltip)</h3>
+          <p>
+            Натисніть на виділене слово, щоб побачити підказку. Підказка автоматично
+            позиціюється так, щоб не виходити за межі екрана. Клік у будь-якому іншому
+            місці ховає підказку.
+          </p>
+          <div class="demo-output">
+            <p>
+              <span class="tooltip-trigger"
+                    data-tooltip="Фотосинтез — процес перетворення світлової енергії на хімічну в хлоропластах. Рослини поглинають CO2 і виділяють O2.">Фотосинтез</span>
+              &mdash; один з найважливіших процесів на Землі. Завдяки ньому рослини
+              виробляють
+              <span class="tooltip-trigger"
+                    data-tooltip="Кисень (O2) — газ, необхідний для дихання більшості живих організмів. Рослини виробляють близько 70% атмосферного кисню.">кисень</span>,
+              який необхідний для дихання.
+            </p>
+            <p>
+              <span class="tooltip-trigger"
+                    data-tooltip="Хлорофіл — зелений пігмент, що міститься в хлоропластах рослинних клітин. Поглинає червоне та синє світло, відбиваючи зелене.">Хлорофіл</span>
+              надає рослинам зелений колір. Без
+              <span class="tooltip-trigger"
+                    data-tooltip="Хлоропласти — клітинні органели рослин, де відбувається фотосинтез. Містять хлорофіл та інші пігменти.">хлоропластів</span>
+              фотосинтез був би неможливий.
+            </p>
+            <p>
+              Кореневе живлення забезпечує рослину
+              <span class="tooltip-trigger"
+                    data-tooltip="Мінеральні солі — неорганічні речовини, що надходять з ґрунту через кореневу систему. Містять азот, фосфор, калій та інші елементи.">мінеральними солями</span>.
+            </p>
+          </div>
+        </section>
+
+        <!-- Завдання 2: Drag-and-drop колонок таблиці -->
+        <section class="demo-section" id="task2">
+          <h3>Завдання 2 &mdash; Перетягування колонок таблиці</h3>
+          <p>
+            Перетягніть заголовок колонки на інший заголовок, щоб поміняти колонки
+            місцями. Дані таблиці переміщуються разом із заголовками.
+          </p>
+          <table id="drag-table">
+            <caption>Характеристики рослин (перетягуйте заголовки)</caption>
+            <thead>
+              <tr>
+                <th draggable="true">Назва</th>
+                <th draggable="true">Родина</th>
+                <th draggable="true">Висота</th>
+                <th draggable="true">Застосування</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Соняшник</td>
+                <td>Айстрові</td>
+                <td>1-3 м</td>
+                <td>Олія, їжа</td>
+              </tr>
+              <tr>
+                <td>Дуб</td>
+                <td>Букові</td>
+                <td>20-40 м</td>
+                <td>Деревина</td>
+              </tr>
+              <tr>
+                <td>Ромашка</td>
+                <td>Айстрові</td>
+                <td>15-60 см</td>
+                <td>Медицина</td>
+              </tr>
+              <tr>
+                <td>Троянда</td>
+                <td>Розові</td>
+                <td>0.5-3 м</td>
+                <td>Декор</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Завдання 3: Зміна кольору квадрата -->
+        <section class="demo-section" id="task3">
+          <h3>Завдання 3 &mdash; Зміна кольору квадрата</h3>
+          <p>
+            Зліва &mdash; список із 5 кольорів. Справа &mdash; чорний квадрат.
+            Оберіть колір зі списку, щоб змінити колір квадрата.
+          </p>
+          <div class="color-panel">
+            <div>
+              <h4>Оберіть колір:</h4>
+              <ul class="color-list" id="color-list">
+                <li data-color="#c62828" style="border-left: 4px solid #c62828;">Червоний (Троянда)</li>
+                <li data-color="#1b5e20" style="border-left: 4px solid #1b5e20;">Зелений (Листя)</li>
+                <li data-color="#1565c0" style="border-left: 4px solid #1565c0;">Синій (Дзвіночок)</li>
+                <li data-color="#f9a825" style="border-left: 4px solid #f9a825;">Жовтий (Соняшник)</li>
+                <li data-color="#6a1b9a" style="border-left: 4px solid #6a1b9a;">Фіолетовий (Лаванда)</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Квадрат:</h4>
+              <div class="color-square" id="color-square"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Завдання 4: Координати миші та код клавіші -->
+        <section class="demo-section" id="task4">
+          <h3>Завдання 4 &mdash; Координати миші та код клавіші</h3>
+          <p>
+            Рухайте мишею по сторінці та натискайте клавіші, щоб побачити поточні
+            координати курсора та код натиснутої клавіші.
+          </p>
+          <div class="coords-display" id="coords-display">
+            <div>
+              <span class="label">Mouse X:</span> <span id="mouse-x">0</span>
+            </div>
+            <div>
+              <span class="label">Mouse Y:</span> <span id="mouse-y">0</span>
+            </div>
+            <div>
+              <span class="label">Клавіша:</span> <span id="key-code">---</span>
+            </div>
+            <div>
+              <span class="label">Код:</span> <span id="key-value">---</span>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <aside>
+      <h3>Завдання Блоку 2</h3>
+      <ul>
+        <li><a href="#task1">1. Спливаюча підказка</a></li>
+        <li><a href="#task2">2. Перетягування колонок</a></li>
+        <li><a href="#task3">3. Зміна кольору</a></li>
+        <li><a href="#task4">4. Координати та клавіші</a></li>
+      </ul>
+
+      <h4>Інші блоки</h4>
+      <ul>
+        <li><a href="demos.html">Блок 1 — Основи</a></li>
+        <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <!-- Tooltip element (created once, reused) -->
+  <div class="custom-tooltip" id="custom-tooltip"></div>
+
+  <footer>
+    <p>&copy; 2026 Ботанічний довідник &mdash; Студент, варіант 9</p>
+    <p>Харківський національний університет радіоелектроніки (ХНУРЕ)</p>
+    <p><a href="#top">Повернутися на початок</a></p>
+  </footer>
+
+  <script src="js/interactive.js"></script>
+</body>
+</html>

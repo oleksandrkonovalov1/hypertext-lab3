@@ -1,0 +1,12 @@
+{
+  "name": "hypertext-lab3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ЛР3 — Dynamic HTML. Форми. Основи JavaScript. Ботанічний довідник, варіант 9.",
+  "scripts": {
+    "report": "node reports/lr3/generate-report.mjs"
+  },
+  "dependencies": {
+    "docx": "^9.5.0"
+  }
+}

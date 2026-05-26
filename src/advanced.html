@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Блок 3 — Розширені JS-завдання: рекламний банер з cookies, блокнот з localStorage.">
+  <meta name="keywords" content="JavaScript, localStorage, cookies, блокнот, реклама, banner">
+  <meta name="author" content="Студент, варіант 9">
+  <meta name="theme-color" content="#1b5e20">
+  <title>JS Демо: Блок 3 &mdash; Ботанічний довідник</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+  <header>
+    <h1>Ботанічний довідник</h1>
+    <p class="tagline">Блок 3 &mdash; Розширені JavaScript-завдання</p>
+  </header>
+
+  <nav class="main-nav">
+    <ul class="nav-menu">
+      <li><a href="index.html">Головна</a></li>
+      <li class="dropdown">
+        <a href="plants.html">Рослини &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="plants.html#flowering">Квіткові</a></li>
+          <li><a href="plants.html#trees">Дерева</a></li>
+          <li><a href="plants.html#herbs">Трави</a></li>
+          <li><a href="plants.html#table">Таблиця</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Контакти</a></li>
+      <li class="dropdown">
+        <a href="demos.html" class="active">JS Демо &#9662;</a>
+        <ul class="dropdown-menu">
+          <li><a href="demos.html">Блок 1 — Основи</a></li>
+          <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+          <li><a href="advanced.html">Блок 3 — Розширені</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+      <article>
+        <h2>Блок 3 &mdash; Розширені завдання (оцінка 5)</h2>
+        <p>
+          Два завдання, що демонструють роботу з <code>localStorage</code>:
+          рекламний банер із функцією приховування на один день та блокнот
+          для збереження записів.
+        </p>
+
+        <!-- Завдання 1: Рекламний банер -->
+        <section class="demo-section" id="task1">
+          <h3>Завдання 1 &mdash; Рекламний банер з приховуванням</h3>
+          <p>
+            Рекламний текст відображається на сторінці. Кнопка &laquo;Приховати&raquo;
+            ховає рекламу рівно на один день. При повторному відвідуванні сторінки
+            реклама не з'являється, поки не мине 24 години. Використовується
+            <code>localStorage</code>.
+          </p>
+          <div id="ad-container">
+            <div class="ad-banner" id="ad-banner">
+              <div>
+                <p>Відвідайте Ботанічний сад ХНУРЕ!</p>
+                <p style="font-weight:normal; font-size:0.9em; color:#795548;">
+                  Безкоштовна екскурсія для студентів щосуботи з 10:00 до 14:00.
+                  Понад 500 видів рослин з усього світу!
+                </p>
+              </div>
+              <button class="btn-dismiss" onclick="dismissAd()">Приховати</button>
+            </div>
+          </div>
+          <p id="ad-status" style="margin-top:10px; font-size:0.9em; color:#888;"></p>
+          <button class="btn btn-secondary" onclick="resetAd()" style="margin-top:8px;">
+            Скинути приховування (для демонстрації)
+          </button>
+        </section>
+
+        <!-- Завдання 2: Блокнот -->
+        <section class="demo-section" id="task2">
+          <h3>Завдання 2 &mdash; Блокнот із збереженням</h3>
+          <p>
+            Блокнот дозволяє створювати нові записи. Записи відображаються зліва як
+            посилання з датою створення. Натиснувши на посилання, можна переглянути
+            текст запису. Всі дані зберігаються в <code>localStorage</code>.
+          </p>
+          <div class="notepad-container">
+            <div class="notepad-sidebar">
+              <h4>Записи</h4>
+              <ul id="notes-list"></ul>
+            </div>
+            <div class="notepad-editor">
+              <textarea id="note-text" placeholder="Введіть текст запису..."></textarea>
+              <div class="notepad-actions">
+                <button class="btn" onclick="saveNote()">Зберегти запис</button>
+                <button class="btn btn-secondary" onclick="newNote()">Новий запис</button>
+                <button class="btn btn-danger" onclick="deleteNote()">Видалити</button>
+                <button class="btn btn-danger" onclick="clearAllNotes()">Очистити все</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <aside>
+      <h3>Завдання Блоку 3</h3>
+      <ul>
+        <li><a href="#task1">1. Рекламний банер</a></li>
+        <li><a href="#task2">2. Блокнот</a></li>
+      </ul>
+
+      <h4>Інші блоки</h4>
+      <ul>
+        <li><a href="demos.html">Блок 1 — Основи</a></li>
+        <li><a href="interactive.html">Блок 2 — Інтерактив</a></li>
+      </ul>
+
+      <h4>Підказки</h4>
+      <ul>
+        <li>Записи зберігаються у localStorage</li>
+        <li>Реклама ховається на 24 години</li>
+        <li>Дані зберігаються між сесіями</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Ботанічний довідник &mdash; Студент, варіант 9</p>
+    <p>Харківський національний університет радіоелектроніки (ХНУРЕ)</p>
+    <p><a href="#top">Повернутися на початок</a></p>
+  </footer>
+
+  <script src="js/advanced.js"></script>
+</body>
+</html>
